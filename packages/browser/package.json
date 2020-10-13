@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "package": "ng build && cd ./dist/mu-browser && npm pack"
+    "package": "ng build && cd ./dist/mu-browser"
   },
   "private": true,
   "dependencies": {
