@@ -6,7 +6,7 @@
     "target"                  : "esnext",
     "noImplicitAny"           : true,
     "sourceMap"               : true,
-    "outDir"                  : "lib",
+    "outDir"                  : "../../server",
     "declaration"             : true,
     "emitDecoratorMetadata"   : true,
     "experimentalDecorators"  : true,

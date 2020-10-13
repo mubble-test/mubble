@@ -7,7 +7,7 @@
     "noImplicitAny"           : true,
     "sourceMap"               : true,
     "typeRoots"               : ["node_modules/@types"],
-    "outDir"                  : "lib",
+    "outDir"                  : "../../core",
     "declaration"             : true,
     "emitDecoratorMetadata"   : true,
     "experimentalDecorators"  : true,

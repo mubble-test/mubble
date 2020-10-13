@@ -1,20 +1,31 @@
 {
-  "name": "mubble",
+  "name": "@rvab/mubble_test",
   "description": "Library with projects",
   "version": "0.0.0",
   "scripts": {
     "build": "node mubble-cli.js build",
-    "build:server": "echo 'building server \n\n' && cd packages/server && npm install && tsc && echo '\n\n server built\n\n'  && cd ../../ && pwd",
-    "build:core": "cd packages/core && npm install && tsc && cd ../../",
-    "build:browser": "cd packages/browser && npm install && npm run package && cd ../../"
+    "build:server": "node mubble-cli.js build server",
+    "build:core": "node mubble-cli.js build core",
+    "build:browser": "node mubble-cli.js build browser",
+    "test" : "node mubble-cli.js test",
+    "test:server":"node mubble-cli.js test server",
+    "test:core":"node mubble-cli.js test core",
+    "test:browser":"node mubble-cli.js test browser"
   },
   "devDependencies": {
     "colors": "^1.3.0",
     "husky": "^4.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvab/mubble_test.git"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "node mubble-cli.js test"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

@@ -1,0 +1,31 @@
+import { BaseDatastore } from './basedatastore';
+import { RunContextServer } from '../../rc-server';
+export declare class DSTransaction<T extends BaseDatastore<T> = any> {
+    private _transaction;
+    private _namespace;
+    private _kindname;
+    private _datastore;
+    private tranId;
+    private ack;
+    private tranSteps;
+    constructor(rc: RunContextServer, datastore: any, namespace: string, kindname: string);
+    getTransaction(rc: RunContextServer): any;
+    getIdFromTransaction(rc: RunContextServer, model: T, parentKey?: any): Promise<number>;
+    start(rc: RunContextServer): Promise<void>;
+    commit(rc: RunContextServer): Promise<void>;
+    rollback(rc: RunContextServer): Promise<void>;
+    createQuery(rc: RunContextServer, namespace: string, kindName: string): Promise<any>;
+    get(rc: RunContextServer, model: T, ignoreRNF?: boolean, parentKey?: any): Promise<boolean>;
+    mGet(rc: RunContextServer, ignoreRNF: boolean, ...models: T[]): Promise<boolean>;
+    insert(rc: RunContextServer, model: T, parentKey?: any, insertTime?: number): Promise<void>;
+    mInsert(rc: RunContextServer, insertTime: number | undefined, ...recs: T[]): Promise<boolean>;
+    mInsertInternal(rc: RunContextServer, insertTime: number | undefined, ...models: T[]): Promise<void>;
+    update(rc: RunContextServer, model: T, updRec?: any, parentKey?: any): Promise<void>;
+    mUpdate(rc: RunContextServer, ...recs: T[]): boolean;
+    mUpdateInternal(rc: RunContextServer, ...models: T[]): void;
+    delete(rc: RunContextServer, model: T, parentKey?: any): void;
+    mDelete(rc: RunContextServer, ...models: T[]): void;
+    mUniqueInsert(rc: RunContextServer, ...models: T[]): Promise<boolean>;
+    mUniqueUpdate(rc: RunContextServer, model: T, ...recs: any[]): Promise<boolean>;
+    mUniqueDelete(rc: RunContextServer, ...models: T[]): boolean;
+}
