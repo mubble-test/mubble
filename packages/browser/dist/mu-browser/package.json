@@ -1,0 +1,23 @@
+{
+  "name": "@mubble/browser",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/compiler": "~10.0.2",
+    "@angular/core": "^10.0.2",
+    "@mubble/core": "file:../../../../mubble/packages/core/",
+    "dexie": "^2.0.1",
+    "@angular/flex-layout": "10.0.0-beta.32",
+    "@angular/forms": "~10.0.2"
+  },
+  "main": "bundles/mubble-browser.umd.js",
+  "module": "fesm2015/mubble-browser.js",
+  "es2015": "fesm2015/mubble-browser.js",
+  "esm2015": "esm2015/mubble-browser.js",
+  "fesm2015": "fesm2015/mubble-browser.js",
+  "typings": "mubble-browser.d.ts",
+  "metadata": "mubble-browser.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
