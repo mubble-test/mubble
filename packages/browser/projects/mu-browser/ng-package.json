@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../../mu-browser",
+  "dest": "../../lib",
   "lib": {
     "entryFile": "src/public-api.ts",
     "umdModuleIds": {
@@ -12,3 +12,4 @@
     "src/lib/ui/mu-components/mu-components.module.scss"
   ]
 }
+ 

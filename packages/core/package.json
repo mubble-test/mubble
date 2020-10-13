@@ -1,6 +1,6 @@
 {
-  "name": "@mubble/core",
-  "version": "1.0.0",
+  "name": "@mubble-test/core",
+  "version": "0.0.0",
   "description": "Common core module for client & server projects for Mubble",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,14 +8,19 @@
     "test": "jest --verbose --coverage",
     "test:update": "jest --verbose --coverage --updateSnapshot",
     "test:watch": "jest --verbose --watch",
-    "coverage": "jest --verbose --coverage && open ./coverage/index.html",
-    "prepublish": "tsc"
+    "coverage": "jest --verbose --coverage && open ./coverage/index.html"
   },
   "author": "Raghvendra Varma",
   "repository": {
     "type": "git",
-    "url": "https://source.developers.google.com/p/obopay-devtools/r/mubble"
+    "url": "https://github.com/mubble-test/mubble.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "lib"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@types/dot": "^1.1.3",

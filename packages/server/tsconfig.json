@@ -6,12 +6,20 @@
     "target"                  : "esnext",
     "noImplicitAny"           : true,
     "sourceMap"               : true,
-    "outDir"                  : "../../server",
+    "outDir"                  : "lib",
     "declaration"             : true,
     "emitDecoratorMetadata"   : true,
     "experimentalDecorators"  : true,
     "strictNullChecks"        : true,
-    "typeRoots"               : ["node_modules/@types"]
+    "typeRoots"               : ["node_modules/@types"],
+    "paths": {
+      "@mubble/core": [
+        "../node_modules/@mubble-test/core"
+      ],
+      "@mubble/core/*": [
+        "../node_modules/@mubble-test/core/*"
+      ]
+    }
   },
   "include": [
       "src/**/*"
@@ -22,7 +30,6 @@
       "__tests__"
   ],
   "typeAcquisition": {
-    "enable": true,
-    "include": ["../core"]
+    "enable": true
   }
 }

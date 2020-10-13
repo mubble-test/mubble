@@ -5,6 +5,6 @@ lib
 vscode-user-settings.json
 package-lock.json
 coverage
-core
-server
-mu-browser
+packages/browser/mu-browser
+
+

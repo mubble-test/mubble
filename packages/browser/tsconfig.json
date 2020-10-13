@@ -24,6 +24,12 @@
       ],
       "mu-browser/*": [
         "dist/mu-browser/*"
+      ],
+      "@mubble/core": [
+        "./node_modules/@mubble-test/core"
+      ],
+      "@mubble/core/*": [
+        "./node_modules/@mubble-test/core/*"
       ]
     }
   }

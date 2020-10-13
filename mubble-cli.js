@@ -77,6 +77,8 @@ class MubbleCli {
 
     for (const pack in PACKAGES) {
 
+      if (pack.toLowerCase() !== packageName.toLowerCase()) continue
+      
       const path  = PACKAGES[pack].path
       
       runMode === RUN_MODE.BUILD 

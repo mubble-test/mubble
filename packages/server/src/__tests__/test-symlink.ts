@@ -1,4 +1,4 @@
-import { DataMasker } from '@mubble/core/src/data-masker'
+import { DataMasker } from '@mubble/core/lib/data-masker'
 
 describe('DataMasker',()=>{
   it('maskData works', ()=>{
