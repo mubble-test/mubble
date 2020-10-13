@@ -1,8 +1,9 @@
 {
   "name": "@rvab/mubble_test",
   "description": "Library with projects",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
+    "postinstall": "npm run build",
     "build": "node mubble-cli.js build",
     "build:server": "node mubble-cli.js build server",
     "build:core": "node mubble-cli.js build core",
@@ -20,11 +21,7 @@
     "type": "git",
     "url": "https://github.com/rvab/mubble_test.git"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "node mubble-cli.js test"
-    }
-  },
+  
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }
